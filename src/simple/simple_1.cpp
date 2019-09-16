@@ -3,6 +3,10 @@ using namespace std;
 
 int main( )
 {
-    cout << "Testing 1, 2, 3\n";
-    return 0;
+  int x;
+  cout << "Enter an integer: ";
+  cin >> x;  
+  x = x + 5;
+  cout << "x = " << x << "\n";
+  return 0;
 }
