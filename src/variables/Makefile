@@ -41,4 +41,4 @@ extern: Extern_1.cpp Extern_2.cpp
 	$(CXX) -o extern Extern_1.cpp Extern_2.cpp
 
 clean:
-	rm -f *.o wrong1 wrong2 wrong3 uninit datatypes1 datatypes2 overflow composite1 composite2 scope1 scope2
+	rm -f *.o wrong1 wrong2 wrong3 uninit datatypes1 datatypes2 overflow composite1 composite2 scope1 scope2 extern
