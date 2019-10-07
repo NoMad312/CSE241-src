@@ -7,13 +7,15 @@ struct Pair {
     int second;
 };
 
+bool shouldPrint = true;
+
 Pair& swap(Pair&);
 
 int main()
 {
     Pair p1 = {10, 20};
     cout << "address of p1: " << &p1 << '\n';
-    
+
     Pair p2 = swap(p1);
 
     cout << "p1.first = " << p1.first <<  '\n';
@@ -25,7 +27,9 @@ int main()
     cout << "address of p2: " << &p2 << '\n';
 
     // in order to use the following line, give -fpermissive to g++.
+    shouldPrint = false;
     cout << "address of the temp var holding the return value of swap(p1): " << &swap(p1) << '\n';
+    shouldPrint =true;
 
     return 0;
 }
@@ -38,6 +42,7 @@ Pair& swap(Pair& pair)
     pair.first = pair.second;
     pair.second = temp;
 
-    cout << "address of pair: " << &pair << '\n';
+    if (shouldPrint)
+        cout << "address of pair: " << &pair << '\n';
     return pair;
 }
