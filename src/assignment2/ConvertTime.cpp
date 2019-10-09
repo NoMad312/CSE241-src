@@ -24,13 +24,22 @@ bool Equal(Time24& time1, Time24& time2)
         time1.minutes == time2.minutes;
 }
 
+string ToString(int hour_or_min)
+{
+    if (hour_or_min < 10) {
+        return "0" + to_string(hour_or_min);
+    } else {
+        return to_string(hour_or_min);
+    }
+}
+
 string ToString(Time12& time)
 {
-    return to_string(time.hours) + ":" + to_string(time.minutes) + " " +
+    return ToString(time.hours) + ":" + ToString(time.minutes) + " " +
         (time.isAM? "AM" : "PM");
 }
 
 string ToString(Time24& time)
 {
-    return to_string(time.hours) + ":" + to_string(time.minutes);
+    return ToString(time.hours) + ":" + ToString(time.minutes);
 }
