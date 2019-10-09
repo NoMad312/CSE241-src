@@ -10,7 +10,7 @@ struct Time24 {
 struct Time12 {
     int hours;
     int minutes;
-    bool isAM;
+    bool isAM; // true if am, false if pm
 };
 
 Time12* ConvertTime(Time24&);
