@@ -37,6 +37,8 @@ int main()
     // cout << "\n";
     // cout << "access through c++\n";
     // for (int i = 0; i < 5; i++) {
+    //     // c is a const pointer.
+    //     // once initialized, you cannot change its value
     //     cout << *(c++) << "\n";
     // }
 }
