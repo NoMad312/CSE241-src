@@ -13,5 +13,8 @@ string3: String3.cpp
 string4: String4.cpp
 	$(CXX) -g -o string4 String4.cpp
 
+string5: String5.cpp
+	$(CXX) -g -o string5 String5.cpp
+
 clean:
 	rm -f *.o string[1-9]
